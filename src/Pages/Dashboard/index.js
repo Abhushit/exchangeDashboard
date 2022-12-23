@@ -4,15 +4,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import TableComponent from "../../Components/TableComponent";
 
 const allBots = [
-  {
-    dict: {
-      active: false,
-      exchange: "Binance",
-      name: "Marc Test Bot 2",
-      owner: "3XiZV2KgANevoEAI09aas4YF3wH2",
-    },
-    id: "7oC9JzibXC3XF8aDniQN",
-  },
+
   {
     dict: {
       active: true,
@@ -27,22 +19,7 @@ const allBots = [
     },
     id: "Bn97R42H3TAvfuuUDQW9",
   },
-  {
-    dict: {
-      active: true,
-      api_key:
-        "8EYWidwoML8CtL3ePjpCVz4G31aexBPBGe7HzTecGyQtlVrIHKrrm56aEs6I7bwZ",
-      daily_dd: "x",
-      exchange: "Binance",
-      main_dd: "x",
-      name: "Marc Binance Bot",
-      owner: "21HBQJ5YvBc1GTq1aR98oIVQ4xM2",
-      secret_key:
-        "sRxlnlN6WL8Fjg1AOUnRlClDpvjIElwTD3ZWnj2AAysf8C2FZj607SHn3whRaZMj",
-      token: "x",
-    },
-    id: "JwTyNWirEGndxRVwK3Co",
-  },
+  
   {
     dict: {
       active: true,
@@ -54,31 +31,6 @@ const allBots = [
       token: "KFIWDN36GHJK4W6T",
     },
     id: "dqLMRDMpHcqPoVXpKni5",
-  },
-  {
-    dict: {
-      active: true,
-      api_key:
-        "8EYWidwoML8CtL3ePjpCVz4G31aexBPBGe7HzTecGyQtlVrIHKrrm56aEs6I7bwZ",
-      daily_dd: "12",
-      exchange: "Binance",
-      main_dd: "12",
-      name: "Marc Binance Test Bot",
-      owner: "3XiZV2KgANevoEAI09aas4YF3wH2",
-      secret_key:
-        "sRxlnlN6WL8Fjg1AOUnRlClDpvjIElwTD3ZWnj2AAysf8C2FZj607SHn3whRaZMj",
-      token: "12",
-    },
-    id: "exrec09cWPtXJRHBa8lh",
-  },
-  {
-    dict: {
-      active: false,
-      exchange: "Binance",
-      name: "Trade Bot",
-      owner: "HnncKx7YaNbnFzn1QPIw0bXv7ss1",
-    },
-    id: "lKEzSTb14PjkfGnA5IcI",
   },
 ];
 

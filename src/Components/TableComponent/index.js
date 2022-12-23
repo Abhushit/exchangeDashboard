@@ -12,7 +12,10 @@ import moment from "moment/moment";
 
 const StyledPaper = styled(Paper)(({theme}) => ({
   background: theme.palette.primary.darker,
-  color: theme.palette.primary.lighter
+  color: theme.palette.primary.lighter,
+  "& .MuiTableCell-root":{
+    borderBottom:"none"
+  }
 }))
 
 const StyledPagination = styled(TablePagination)(({theme}) => ({
@@ -25,7 +28,8 @@ const StyledPagination = styled(TablePagination)(({theme}) => ({
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.primary.lighter,
+    color: theme.palette.primary.main,
+    fontWeight:"700"
 
   },
   [`&.${tableCellClasses.body}`]: {
@@ -65,8 +69,6 @@ export default function TableComponent(props) {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
-
-    console.log("props", props);
 
   return (
     <StyledPaper sx={{ width: "100%", overflowY: "auto" }}>

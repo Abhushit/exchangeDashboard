@@ -1,7 +1,14 @@
-import { ArrowBack } from "@mui/icons-material";
-import { Box, Card, Container, Grid, IconButton, styled, Typography } from "@mui/material";
+import { ArrowBack, Info } from "@mui/icons-material";
+import {
+  Box,
+  Card,
+  Container,
+  Grid,
+  IconButton,
+  styled,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import TableComponent from "../../../Components/TableComponent";
 
 const columnDrawdawn = [
@@ -64,42 +71,31 @@ const StatsCard = styled(Card)(({ theme }) => ({
   background: theme.palette.primary.dark,
   padding: "20px",
   lineHeight: "2",
-  height:"75%",
+  height: "75%",
   color: theme.palette.primary.lighter,
   [theme.breakpoints.down("md")]: {
     padding: "20px",
     height: "auto",
-
   },
 }));
 
 const MyCard = styled(Card)(({ theme }) => ({
-    background: theme.palette.primary.dark,
+  background: theme.palette.primary.dark,
+  padding: "20px",
+  lineHeight: "2",
+  color: theme.palette.primary.lighter,
+  [theme.breakpoints.down("md")]: {
     padding: "20px",
-    lineHeight: "2",
-    color: theme.palette.primary.lighter,
-    [theme.breakpoints.down("md")]: {
-      padding: "20px",
-    },
-  }));
+  },
+}));
 
 const Stats = () => {
-    const navigate = useNavigate();
-    const handleBack = () => {
-        navigate(-1);
-    }
-
   return (
     <div>
       <Container>
-        <Grid container spacing={3} mt={1}>
-          <Grid item xs={12}>
-            <IconButton onClick={handleBack}>
-                <ArrowBack sx={{ color:"#fff"}} />
-            </IconButton>
-          </Grid>
+        <Grid container spacing={3} mt={1} mb={2}>
           <Grid item md={4} xs={12}>
-            <h2>Statistics</h2>
+            <h2>Statistics </h2>
             <StatsCard>
               <div>
                 <span>Trader : </span> <span className="ml-2">doption</span>
@@ -117,11 +113,11 @@ const Stats = () => {
             </StatsCard>
           </Grid>
           <Grid item md={8} xs={12}>
-          <h2>Drawdown</h2>
+            <h2>Positions</h2>
             <MyCard>
               <TableComponent
-                columns={columnDrawdawn}
-                rows={rowsDrawdawn}
+                columns={columnPositions}
+                rows={rowsPostions}
                 footer={false}
                 // handleEdit={handleEdit}
                 // handleStats={handleStats}
@@ -130,12 +126,12 @@ const Stats = () => {
               />
             </MyCard>
           </Grid>
-          <Grid item md={12} xs={12} >
-          <h2>Positions</h2>
+          <Grid item md={12} xs={12}>
+            <h2>Drawdown</h2>
             <MyCard>
               <TableComponent
-                columns={columnPositions}
-                rows={rowsPostions}
+                columns={columnDrawdawn}
+                rows={rowsDrawdawn}
                 footer={false}
                 // handleEdit={handleEdit}
                 // handleStats={handleStats}
