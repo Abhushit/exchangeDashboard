@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom';
 import Navbar from '../Components/Navbar';
 import Dashboard from '../Pages/Dashboard';
 import AddBot from '../Pages/Dashboard/AddBot';
@@ -7,9 +7,11 @@ import Stats from '../Pages/Dashboard/Stats';
 import Login from '../Pages/Login';
 
 const PrivateRoute = ({ children }) => {
+    const location = useLocation();
+    var urlName = location.pathname.split("/",2).pop();
     return localStorage.getItem("token") ? (
         <>
-        <Navbar />
+        {location.pathname.split("/",2).pop() !== "stats" && <Navbar />}
         {children}
       </>
     ) : (
