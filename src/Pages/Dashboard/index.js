@@ -17,7 +17,7 @@ const allBots = [
       secret_key: "12",
       token: "24eeacac4022b1edd63d87f11de9fa0b87a46126",
     },
-    id: "Bn97R42H3TAvfuuUDQW9",
+    id: "1",
   },
   
   {
@@ -30,7 +30,7 @@ const allBots = [
       secret_key: "HashhajksjH162678",
       token: "KFIWDN36GHJK4W6T",
     },
-    id: "dqLMRDMpHcqPoVXpKni5",
+    id: "2",
   },
 ];
 
