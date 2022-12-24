@@ -9,7 +9,8 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
-import TableComponent from "../../../Components/TableComponent";
+// import TableComponent from "../../../Components/TableComponent";
+import TableComponentStats from "../../../Components/TableComponentStats";
 
 const columnDrawdawn = [
   { id: "date", name: "Date" },
@@ -75,6 +76,16 @@ const rowsPostions = [
   { symbol: "$", entry: "123", sl: "321", tp: "374", pnl: "19" },
   { symbol: "$", entry: "11", sl: "723", tp: "12", pnl: "89" },
   { symbol: "$", entry: "67", sl: "112", tp: "812", pnl: "32" },
+  { symbol: "$", entry: "10", sl: "19", tp: "89", pnl: "10" },
+  { symbol: "$", entry: "09", sl: "10", tp: "16", pnl: "0.9" },
+  { symbol: "$", entry: "123", sl: "321", tp: "374", pnl: "19" },
+  { symbol: "$", entry: "11", sl: "723", tp: "12", pnl: "89" },
+  { symbol: "$", entry: "67", sl: "112", tp: "812", pnl: "32" },
+  { symbol: "$", entry: "10", sl: "19", tp: "89", pnl: "10" },
+  { symbol: "$", entry: "09", sl: "10", tp: "16", pnl: "0.9" },
+  { symbol: "$", entry: "123", sl: "321", tp: "374", pnl: "19" },
+  { symbol: "$", entry: "11", sl: "723", tp: "12", pnl: "89" },
+  { symbol: "$", entry: "67", sl: "112", tp: "812", pnl: "32" },
 ];
 
 const rowsLogs = [
@@ -90,7 +101,7 @@ const StatsCard = styled(Card)(({ theme }) => ({
   background: theme.palette.primary.dark,
   padding: "20px",
   lineHeight: "2",
-  height: "69%",
+  height: "76%",
   color: theme.palette.primary.lighter,
   [theme.breakpoints.down("md")]: {
     padding: "20px",
@@ -134,7 +145,7 @@ const Stats = () => {
           <Grid item md={8} xs={12}>
             <h2>Positions</h2>
             <MyCard>
-              <TableComponent
+              <TableComponentStats
                 columns={columnPositions}
                 rows={rowsPostions}
                 footer={false}
@@ -148,7 +159,7 @@ const Stats = () => {
           <Grid item md={12} xs={12}>
             <h2>Drawdown</h2>
             <MyCard>
-              <TableComponent
+              <TableComponentStats
                 columns={columnDrawdawn}
                 rows={rowsDrawdawn}
                 footer={false}
@@ -163,7 +174,7 @@ const Stats = () => {
           <Grid item md={12} xs={12}>
             <h2>Logs</h2>
             <MyCard>
-              <TableComponent
+              <TableComponentStats
                 columns={columnLogs}
                 rows={rowsLogs}
                 footer={false}
