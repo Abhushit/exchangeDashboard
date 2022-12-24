@@ -278,7 +278,7 @@ const AddBot = () => {
                   variant="outlined"
                   name="contractAmount"
                   type="text"
-                  label="Contract Amount in"
+                  label="Contract Amount"
                   value={botDetails.contractAmount}
                   onChange={(e) => handleChange(e)}
                   sx={{ width: "100%" }}
@@ -293,6 +293,18 @@ const AddBot = () => {
                   value={botDetails.markOrBid}
                   onChange={(e) => handleChange(e)}
                   sx={{ width: "100%" }}
+                />
+              </Grid>
+              <Grid item sm={12}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={botDetails.active}
+                      onChange={handleCheck}
+                      name="active"
+                    />
+                  }
+                  label="Bot Active"
                 />
               </Grid>
             </Grid>
@@ -332,6 +344,18 @@ const AddBot = () => {
                   sx={{ width: "100%" }}
                 />
               </Grid>
+              <Grid item sm={12}>
+                <FormControlLabel
+                  control={
+                    <Checkbox
+                      checked={botDetails.active}
+                      onChange={handleCheck}
+                      name="active"
+                    />
+                  }
+                  label="Bot Active"
+                />
+              </Grid>
             </Grid>
           )}
 
@@ -347,7 +371,8 @@ const AddBot = () => {
               disabled={loading}
               style={{ marginLeft: "10px" }}
             >
-              {params.id ? "Edit Bot" : "Add Bot"}
+              {/* {params.id ? "Edit Bot" : "Add Bot"} */}
+              Save
             </Button>
 
             {loading && (

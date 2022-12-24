@@ -127,7 +127,7 @@ const Stats = () => {
                 <span>Balance : </span> <span className="ml-2">110.56</span>
               </div>
               <div>
-                <span>Drawdawn : </span> <span className="ml-2">0.0</span>
+                <span>Daily Drawdawn : </span> <span className="ml-2">0.0</span>
               </div>
             </StatsCard>
           </Grid>
