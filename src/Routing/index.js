@@ -33,7 +33,7 @@ const Routing = () => {
             {/* Bots*/}
 
             {/* Stats*/}
-            <Route path="/stats/:id" element={<PrivateRoute> <Stats/> </PrivateRoute>} />
+            <Route path="/stats/:id" element={<Stats/>} />
             {/* Stats*/}
         
             <Route path="/login" element={<Login />} />
