@@ -14,7 +14,7 @@ const StyledPaper = styled(Paper)(({theme}) => ({
   background: theme.palette.primary.darker,
   color: theme.palette.primary.lighter,
   "& .MuiTableCell-root":{
-    borderBottom:"none"
+    borderBottom:"none",
   }
 }))
 

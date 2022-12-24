@@ -26,6 +26,16 @@ const columnPositions = [
   { id: "pnl", name: "PNL" },
 ];
 
+const columnLogs = [
+  { id: "trader", name: "Trader" },
+  { id: "stock", name: "Stock" },
+  { id: "entry", name: "Entry" },
+  { id: "sl", name: "SL" },
+  { id: "tp", name: "TP" },
+  { id: "rr", name: "RR" },
+  { id: "time", name: "Time" },
+];
+
 const rowsDrawdawn = [
   {
     date: "2022-10-23",
@@ -67,11 +77,20 @@ const rowsPostions = [
   { symbol: "$", entry: "67", sl: "112", tp: "812", pnl: "32" },
 ];
 
+const rowsLogs = [
+  { trader: "Binance", stock:"259", entry: "10", sl: "19", tp: "89", rr: "10", time: "2022-10-12" },
+  { trader: "RXCM", stock:"1200", entry: "10", sl: "19", tp: "89", rr: "10", time: "2022-10-12" },
+  { trader: "Robinhood", stock:"400", entry: "10", sl: "19", tp: "89", rr: "10", time: "2022-10-12" },
+  { trader: "Robin", stock:"90", entry: "10", sl: "19", tp: "89", rr: "10", time: "2022-10-12" },
+  { trader: "Binance New", stock:"40`", entry: "10", sl: "19", tp: "89", rr: "10", time: "2022-10-12" },
+];
+
+
 const StatsCard = styled(Card)(({ theme }) => ({
   background: theme.palette.primary.dark,
   padding: "20px",
   lineHeight: "2",
-  height: "75%",
+  height: "69%",
   color: theme.palette.primary.lighter,
   [theme.breakpoints.down("md")]: {
     padding: "20px",
@@ -93,7 +112,7 @@ const Stats = () => {
   return (
     <div>
       <Container>
-        <Grid container spacing={3} mt={1} mb={2}>
+        <Grid container spacing={3} mt={1} mb={4}>
           <Grid item md={4} xs={12}>
             <h2>Statistics </h2>
             <StatsCard>
@@ -132,6 +151,21 @@ const Stats = () => {
               <TableComponent
                 columns={columnDrawdawn}
                 rows={rowsDrawdawn}
+                footer={false}
+                // handleEdit={handleEdit}
+                // handleStats={handleStats}
+                // options={options}
+                // currentChange={currentChange}
+              />
+            </MyCard>
+          </Grid>
+
+          <Grid item md={12} xs={12}>
+            <h2>Logs</h2>
+            <MyCard>
+              <TableComponent
+                columns={columnLogs}
+                rows={rowsLogs}
                 footer={false}
                 // handleEdit={handleEdit}
                 // handleStats={handleStats}
